@@ -2,10 +2,14 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export default async function middleware(request: NextRequest) {
+  console.log("hostname", request.nextUrl.host);
 
   const host = request.nextUrl.host;
 
   if (host === "lvl23.ravi")
+    return NextResponse.redirect("https://portfolio-ravvi-kumar.vercel.app/");
+
+  if (host === "ravi.lvl23")
     return NextResponse.redirect("https://portfolio-ravvi-kumar.vercel.app/");
 
   return NextResponse.next();
