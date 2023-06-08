@@ -12,6 +12,9 @@ export default async function middleware(request: NextRequest) {
   if (host === "ravi.lvl23.dev")
     return NextResponse.redirect("https://portfolio-ravvi-kumar.vercel.app/");
 
+  if (host === "ravi.supplies")
+    return NextResponse.redirect("https://portfolio-ravvi-kumar.vercel.app/");
+
   return NextResponse.next();
 }
 
