@@ -6,10 +6,10 @@ export default async function middleware(request: NextRequest) {
 
   const host = request.nextUrl.host;
 
-  if (host === "lvl23.ravi")
+  if (host === "lvl23.ravi.dev")
     return NextResponse.redirect("https://portfolio-ravvi-kumar.vercel.app/");
 
-  if (host === "ravi.lvl23")
+  if (host === "ravi.lvl23.dev")
     return NextResponse.redirect("https://portfolio-ravvi-kumar.vercel.app/");
 
   return NextResponse.next();
